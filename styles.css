@@ -1,0 +1,95 @@
+/* Fun Kid-friendly Theme */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+}
+
+/* Headings */
+h1 {
+    color: #ff6f61;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* --- PART 1: CSS transitions --- */
+.hover-btn {
+    background: #ffcc00;
+    color: #333;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.4s, transform 0.3s, box-shadow 0.3s;
+}
+
+.hover-btn:hover {
+    background: #ff9900;
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* --- PART 3: Box animation via JS --- */
+.box {
+    width: 100px;
+    height: 100px;
+    background: #66ccff;
+    margin: 20px auto;
+    border-radius: 15px;
+    border: 3px solid #3399ff;
+}
+
+/* Keyframe animation */
+@keyframes dance {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(20deg) scale(1.2); }
+    50% { transform: rotate(-20deg) scale(1.2); }
+    75% { transform: rotate(20deg) scale(1.2); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+.animate {
+    animation: dance 1.5s ease-in-out;
+}
+
+/* --- Modal styling --- */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff8e7;
+    padding: 20px;
+    border-radius: 15px;
+    border: 3px solid #ffcc00;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease;
+    z-index: 100;
+    width: 250px;
+}
+
+.modal h2 {
+    color: #ff6f61;
+}
+
+.modal.show {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Buttons inside modal */
+.modal button {
+    background: #66ccff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal button:hover {
+    background: #3399ff;
+    color: white;
+}
